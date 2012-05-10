@@ -1,3 +1,12 @@
+family:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                family
+    module:               family
+    prefix_path:          /family
+    column:               id
+    with_wildcard_routes: true
+
 article:
   class: sfDoctrineRouteCollection
   options:
@@ -6,7 +15,7 @@ article:
     prefix_path:          /news
     column:               id
     with_wildcard_routes: true
-
+    
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
