@@ -1,0 +1,19 @@
+product:
+ Stand_up:
+  name:         'Stand Up And Testify'
+  tracklist:    '01 - Stand up and testify'
+  release_date: '30/01/2012'
+  pic:          'test'
+  description:  'premier EP'
+  soundcloud:   'http://wwww.soundcloud.com/squirhell'
+  prix:         '4,99€'
+  family_id:    1
+ Born_in:
+  name:         'Born in the 90s'
+  tracklist:    '01 - Born in the 90s'
+  release_date: '30/12/2011'
+  pic:          'test'
+  description:  'premier EP'
+  soundcloud:   'http://wwww.soundcloud.com/torpen'
+  prix:         '4,99€'
+  family_id:    2

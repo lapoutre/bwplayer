@@ -1,0 +1,15 @@
+family:
+ Squirhell:
+  name:         'Antoine B'
+  description:  'squirhell'
+  pic:          'test'
+  link:         'http://wwww.facebook.com/squirhell'
+  contact_mail: 'squirhell@gmail.com'
+  type_family:  1
+ Torpen:
+  name:         'Marc D'
+  description:  'torpen'
+  pic:          'test'
+  link:         'http://wwww.facebook.com/torpen'
+  contact_mail: 'torpen@gmail.com'
+  type_family:  1
