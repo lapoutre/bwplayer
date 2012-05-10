@@ -1,16 +1,16 @@
 <?php
 
 /**
- * release form base class.
+ * Product form base class.
  *
- * @method release getObject() Returns the current form's model object
+ * @method Product getObject() Returns the current form's model object
  *
  * @package    bwrecords
  * @subpackage form
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
-abstract class BasereleaseForm extends BaseFormDoctrine
+abstract class BaseProductForm extends BaseFormDoctrine
 {
   public function setup()
   {
@@ -42,7 +42,7 @@ abstract class BasereleaseForm extends BaseFormDoctrine
       'updated_at'   => new sfValidatorDateTime(),
     ));
 
-    $this->widgetSchema->setNameFormat('release[%s]');
+    $this->widgetSchema->setNameFormat('product[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
 
@@ -53,7 +53,7 @@ abstract class BasereleaseForm extends BaseFormDoctrine
 
   public function getModelName()
   {
-    return 'release';
+    return 'Product';
   }
 
 }

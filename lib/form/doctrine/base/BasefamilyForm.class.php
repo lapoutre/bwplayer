@@ -1,16 +1,16 @@
 <?php
 
 /**
- * family form base class.
+ * Family form base class.
  *
- * @method family getObject() Returns the current form's model object
+ * @method Family getObject() Returns the current form's model object
  *
  * @package    bwrecords
  * @subpackage form
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
-abstract class BasefamilyForm extends BaseFormDoctrine
+abstract class BaseFamilyForm extends BaseFormDoctrine
 {
   public function setup()
   {
@@ -21,7 +21,7 @@ abstract class BasefamilyForm extends BaseFormDoctrine
       'pic'          => new sfWidgetFormInputText(),
       'link'         => new sfWidgetFormTextarea(),
       'contact_mail' => new sfWidgetFormInputText(),
-      'type'         => new sfWidgetFormInputText(),
+      'type_family'  => new sfWidgetFormInputText(),
       'created_at'   => new sfWidgetFormDateTime(),
       'updated_at'   => new sfWidgetFormDateTime(),
     ));
@@ -33,7 +33,7 @@ abstract class BasefamilyForm extends BaseFormDoctrine
       'pic'          => new sfValidatorString(array('max_length' => 255)),
       'link'         => new sfValidatorString(),
       'contact_mail' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'type'         => new sfValidatorPass(),
+      'type_family'  => new sfValidatorPass(),
       'created_at'   => new sfValidatorDateTime(),
       'updated_at'   => new sfValidatorDateTime(),
     ));
@@ -49,7 +49,7 @@ abstract class BasefamilyForm extends BaseFormDoctrine
 
   public function getModelName()
   {
-    return 'family';
+    return 'Family';
   }
 
 }
