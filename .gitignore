@@ -1,0 +1,8 @@
+cache/*
+log/*
+web/uploads/*
+config/databases.yml
+config/propel.ini
+data/sql/*
+lib/model/om/*
+lib/model/map/*
