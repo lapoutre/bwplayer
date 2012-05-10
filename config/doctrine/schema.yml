@@ -4,60 +4,59 @@ options:
  collate: utf8_unicode_ci
  charset: utf8
  
-news:
+Article:
  actAs:
-  Timestampable:
- tableName:     news
+  Timestampable: ~
+ tableName:     article
  columns:
   title: { type: string(255), notnull: true }
-  body: { type: clob, notnull: true }
-  pic: { type: string(255), notnull: true }
+  body:  { type: clob, notnull: true }
+  pic:   { type: string(255), notnull: true }
  relations:
   Comments:
-     class:        comment
-     local:        id
-     foreign:      news_id
-     type:         many
+   class:        Comment
+   local:        id
+   foreign:      article_id
+   type:         many
 
-comment:
+Comment:
  actAs:
-  Timestampable:
+  Timestampable: ~
  tableName: comment
  columns:
-  nick: { type: string(255), notnull: true }
-  message: { type: clob, notnull: true }
-  is_approved: { type: boolean, default: false, notnull: true }
-  news_id: { type: integer(8), notnull: true }
+  nick:         { type: string(255), notnull: true }
+  message:      { type: clob, notnull: true }
+  is_approved:  { type: boolean, default: false, notnull: true }
+  article_id:   { type: integer(8), notnull: true }
  relations:
-  News:
-    local:         news_id
-    foreign:       id
-    onDelete:      cascade
+  Article:
+   local:         article_id
+   foreign:       id
+   onDelete:      cascade
 
-family:
+Family:
  actAs:
-   Timestampable:
+   Timestampable: ~
  tableName: family
  columns:
-   name: { type: string(255), notnull: true }
-   description: { type: clob, notnull: true }
-   pic: { type: string(255), notnull: true }
-   link: { type: clob, notnull: true }
-   contact_mail: { type: string(255), notnull: false }
-   type: { type: int(1), notnull: true }
+  name: { type: string(255), notnull: true }
+  description: { type: clob, notnull: true }
+  pic: { type: string(255), notnull: true }
+  link: { type: clob, notnull: true }
+  contact_mail: { type: string(255), notnull: false }
+  type_family: { type: int(1), notnull: true }
  relations:
-  Releases:
-   class:        release
+  Products:
+   class:        Product
    local:        id
    foreign:      family_id
    type:         many
 
-release:
+Product:
  actAs:
-  Timestampable:
- tableName: release
+  Timestampable: ~
+ tableName: product
  columns:
-  family_id: { type: integer, notnull: true }
   name: { type: string(255), notnull: true }
   tracklist: { type: clob, notnull: true }
   release_date: { type: string(255), notnull: true }
@@ -65,8 +64,9 @@ release:
   description: { type: clob, notnull: true }
   soundcloud: { type: string(255), notnull: true }
   prix: { type: string(255), notnull: true }
+  family_id: { type: integer, notnull: true }
  relations:
   Family:
-   local: family_id
-   foreign: id
+   local:    family_id
+   foreign:  id
    onDelete: cascade

@@ -1,16 +1,16 @@
 <?php
 
 /**
- * comment form base class.
+ * Comment form base class.
  *
- * @method comment getObject() Returns the current form's model object
+ * @method Comment getObject() Returns the current form's model object
  *
  * @package    bwrecords
  * @subpackage form
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
-abstract class BasecommentForm extends BaseFormDoctrine
+abstract class BaseCommentForm extends BaseFormDoctrine
 {
   public function setup()
   {
@@ -19,7 +19,7 @@ abstract class BasecommentForm extends BaseFormDoctrine
       'nick'        => new sfWidgetFormInputText(),
       'message'     => new sfWidgetFormTextarea(),
       'is_approved' => new sfWidgetFormInputCheckbox(),
-      'news_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('news'), 'add_empty' => false)),
+      'article_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Article'), 'add_empty' => false)),
       'created_at'  => new sfWidgetFormDateTime(),
       'updated_at'  => new sfWidgetFormDateTime(),
     ));
@@ -29,7 +29,7 @@ abstract class BasecommentForm extends BaseFormDoctrine
       'nick'        => new sfValidatorString(array('max_length' => 255)),
       'message'     => new sfValidatorString(),
       'is_approved' => new sfValidatorBoolean(array('required' => false)),
-      'news_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('news'))),
+      'article_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Article'))),
       'created_at'  => new sfValidatorDateTime(),
       'updated_at'  => new sfValidatorDateTime(),
     ));
@@ -45,7 +45,7 @@ abstract class BasecommentForm extends BaseFormDoctrine
 
   public function getModelName()
   {
-    return 'comment';
+    return 'Comment';
   }
 
 }
