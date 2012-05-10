@@ -1,0 +1,72 @@
+detect_relations: true
+
+options:
+ collate: utf8_unicode_ci
+ charset: utf8
+ 
+news:
+ actAs:
+  Timestampable:
+ tableName:     news
+ columns:
+  title: { type: string(255), notnull: true }
+  body: { type: clob, notnull: true }
+  pic: { type: string(255), notnull: true }
+ relations:
+  Comments:
+     class:        comment
+     local:        id
+     foreign:      news_id
+     type:         many
+
+comment:
+ actAs:
+  Timestampable:
+ tableName: comment
+ columns:
+  nick: { type: string(255), notnull: true }
+  message: { type: clob, notnull: true }
+  is_approved: { type: boolean, default: false, notnull: true }
+  news_id: { type: integer(8), notnull: true }
+ relations:
+  News:
+    local:         news_id
+    foreign:       id
+    onDelete:      cascade
+
+family:
+ actAs:
+   Timestampable:
+ tableName: family
+ columns:
+   name: { type: string(255), notnull: true }
+   description: { type: clob, notnull: true }
+   pic: { type: string(255), notnull: true }
+   link: { type: clob, notnull: true }
+   contact_mail: { type: string(255), notnull: false }
+   type: { type: int(1), notnull: true }
+ relations:
+  Releases:
+   class:        release
+   local:        id
+   foreign:      family_id
+   type:         many
+
+release:
+ actAs:
+  Timestampable:
+ tableName: release
+ columns:
+  family_id: { type: integer, notnull: true }
+  name: { type: string(255), notnull: true }
+  tracklist: { type: clob, notnull: true }
+  release_date: { type: string(255), notnull: true }
+  pic: { type: string(255), notnull: true }
+  description: { type: clob, notnull: true }
+  soundcloud: { type: string(255), notnull: true }
+  prix: { type: string(255), notnull: true }
+ relations:
+  Family:
+   local: family_id
+   foreign: id
+   onDelete: cascade
