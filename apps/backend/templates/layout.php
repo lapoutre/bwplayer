@@ -9,6 +9,15 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+    <div id="menu" style="margin-bottom: 40px">
+      <?php echo link_to('News', 'article') ?>
+      &nbsp;|&nbsp;
+      <?php echo link_to('Comment', 'comment') ?>
+      &nbsp;|&nbsp;
+      <?php echo link_to('Family', 'family') ?>
+      &nbsp;|&nbsp;
+      <?php echo link_to('Release','product') ?>
+    </div>
     <?php echo $sf_content ?>
   </body>
 </html>

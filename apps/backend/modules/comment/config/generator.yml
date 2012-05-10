@@ -14,7 +14,15 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list:    
+        object_actions:
+          setApprove:
+            label: Approve
+            condition:
+              function: getApprove
+              invert: false
+          _edit: ~
+          _delete: ~
       filter:  ~
       form:    ~
       edit:    ~
