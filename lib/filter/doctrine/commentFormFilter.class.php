@@ -1,14 +1,14 @@
 <?php
 
 /**
- * comment filter form.
+ * Comment filter form.
  *
  * @package    bwrecords
  * @subpackage filter
  * @author     Your name here
  * @version    SVN: $Id: sfDoctrineFormFilterTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class commentFormFilter extends BasecommentFormFilter
+class CommentFormFilter extends BaseCommentFormFilter
 {
   public function configure()
   {
