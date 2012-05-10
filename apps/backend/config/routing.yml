@@ -1,3 +1,12 @@
+comment:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                comment
+    module:               comment
+    prefix_path:          /comment
+    column:               id
+    with_wildcard_routes: true
+
 family:
   class: sfDoctrineRouteCollection
   options:
