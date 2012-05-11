@@ -1,10 +1,26 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+contact:
+  url:  /contact
+  param: { module: contact, action: index }
+
+family:
+  url:  /family
+  param: { module: family, action: index }
+
+news:
+  url:  /news
+  param: { module: news, action: index }
+  
+shop:
+  url:  /shop
+  param: { module: shop, action: index }
+
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: news, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules
