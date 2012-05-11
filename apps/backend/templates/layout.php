@@ -9,6 +9,8 @@
     <?php include_javascripts() ?>
   </head>
   <body>
+    <?php $user = sfContext::getInstance()->getUser() ?>
+    <?php if ($user->hasCredential('admin')): ?>
     <div id="menu" style="margin-bottom: 40px">
       <?php echo link_to('News', 'article') ?>
       &nbsp;|&nbsp;
@@ -17,7 +19,10 @@
       <?php echo link_to('Family', 'family') ?>
       &nbsp;|&nbsp;
       <?php echo link_to('Release','product') ?>
+      &nbsp;|&nbsp;
+      <?php echo link_to('Logout','sf_guard_signout') ?>
     </div>
+    <?php endif; ?>
     <?php echo $sf_content ?>
   </body>
 </html>
