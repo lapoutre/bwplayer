@@ -13,7 +13,7 @@ class FamilyForm extends BaseFamilyForm
   public function configure()
   {
     
-            $this->widgetSchema['pic'] = new sfWidgetFormInputFileEditable(array(
+    $this->widgetSchema['pic'] = new sfWidgetFormInputFileEditable(array(
                 'label' => 'News pic',
                 'file_src' => '/uploads/family/' . $this->getObject()->getPic(),
                 'is_image' => true,
@@ -26,5 +26,31 @@ class FamilyForm extends BaseFamilyForm
                 'path' => sfConfig::get('sf_upload_dir').'/family' ,
                 'required' => false));
     
+    $this->widgetSchema['description'] =  new sfWidgetFormTextareaTinyMCE(
+      array(
+        'width'=>550,
+        'height'=>350,
+        'config'=>'theme_advanced_disable: "anchor,cleanup,help"',
+        'theme'   =>  sfConfig::get('app_tinymce_theme','advanced'),
+      ),
+      array(
+        'class'   =>  'tiny_mce'
+      )
+    );
+    
+    $this->widgetSchema['link'] =  new sfWidgetFormTextareaTinyMCE(
+      array(
+        'width'=>550,
+        'height'=>350,
+        'config'=>'theme_advanced_disable: "anchor,cleanup,help"',
+        'theme'   =>  sfConfig::get('app_tinymce_theme','advanced'),
+      ),
+      array(
+        'class'   =>  'tiny_mce'
+      )
+    );
+    unset($this['created_at'], $this['updated_at']);
   }
+  
+  
 }
