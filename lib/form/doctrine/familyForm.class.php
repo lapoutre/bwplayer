@@ -12,5 +12,19 @@ class FamilyForm extends BaseFamilyForm
 {
   public function configure()
   {
+    
+            $this->widgetSchema['pic'] = new sfWidgetFormInputFileEditable(array(
+                'label' => 'News pic',
+                'file_src' => '/uploads/family/' . $this->getObject()->getPic(),
+                'is_image' => true,
+                'edit_mode' => !$this->isNew(),
+                'template' => '<div>%file%<br />%input%<br />%delete% %delete_label%</div>',
+            ));
+    
+    $this->validatorSchema['pic'] = new sfValidatorFile(array(
+                'mime_types' => 'web_images',
+                'path' => sfConfig::get('sf_upload_dir').'/family' ,
+                'required' => false));
+    
   }
 }

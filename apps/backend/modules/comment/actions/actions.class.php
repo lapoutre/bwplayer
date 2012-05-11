@@ -13,4 +13,18 @@ require_once dirname(__FILE__).'/../lib/commentGeneratorHelper.class.php';
  */
 class commentActions extends autoCommentActions
 {
+  
+  public function executeListSetApprove(sfWebRequest $request){
+    
+    $comment = $this->getRoute()->getObject();
+
+    // setting the product online
+    $comment->setIsApproved(true);
+    $comment->save();
+
+    $this->getUser()->setFlash('notice', 'The comment has been approved');
+    $this->redirect('@comment');
+    
+  }
+  
 }
