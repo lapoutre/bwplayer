@@ -9,6 +9,24 @@
     <?php include_javascripts() ?>
   </head>
   <body>
-    <?php echo $sf_content ?>
+    <div id="wrapper_outer">
+      <header id = "titre1">
+        <img src="/images/logobw.png" align = "left" width = "250px">
+          BRAIN WASHER RECORDS
+      </header>
+      <div id = "menu">
+
+        <ul id="ul_menu">
+          <li><?php echo link_to('NEWS', 'news') ?></li>
+          <li><?php echo link_to('FAMILY', 'family') ?></li>
+          <li><?php echo link_to('SHOP', 'shop') ?></li>
+          <li><?php echo link_to('CONTACT', 'contact') ?></li>
+        </ul>
+      </div>	
+      <?php echo $sf_content ?>
+      <footer>
+        copyright
+      </footer>
+    </div>
   </body>
 </html>
