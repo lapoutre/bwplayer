@@ -1,16 +1,17 @@
 <?php
 
 /**
- * Comment form.
+ * Project form base class.
  *
  * @package    bwrecords
  * @subpackage form
  * @author     Your name here
- * @version    SVN: $Id: sfDoctrineFormTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ * @version    SVN: $Id: sfDoctrineFormBaseTemplate.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class CommentForm extends BaseCommentForm
+class CommentDoctrine extends BaseComment
 {
   public function configure()
   {
+      //tinyMCE
   }
 }
