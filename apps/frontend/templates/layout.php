@@ -22,10 +22,14 @@
                     </div>
             </div>
             <div id = "main-container">
-                <?php echo $sf_content ?>
+                <div id="sf-content">
+                    <?php echo $sf_content ?>
+                </div>
             </div>
-            <div id = "footer">    
+            <div id = "footer"> 
+                <p>
                 copyright
+                </p>
             </div>
         </div>
     </body>
