@@ -1,69 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 #header
 {
-	font-size : 60px;
-	font-weight : bold;
-	text-align : center;
-	margin-left : 20px;
-	margin-top : 25px;
-	vertical-align : middle;
+    font-size : 60px;
+    font-weight : bold;
+    text-align : center;
+    vertical-align : middle;
 }
 
 #menu
 {
-	position:absolute;
-	height:100%;
-	width:100%;
+    position:absolute;
 }
 
 #ul_menu 
 {
- list-style-type:none;
+    list-style-type:none;
 }
- 
+
 #ul_menu  li 
 {
- margin-left:2px;
- float:left; /*pour IE*/
+    margin-left:2px;
+    float:left; /*pour IE*/
 }
- 
+
 #ul_menu  li a 
 {
- font-size : 30px;
- font-weight : bold;
- display:block;
- float:left;   
- width:180px;
- color:black;
- text-decoration:none;
- text-align:center;
- padding:5px;
- border:2px solid;
- /*pour avoir un effet "outset" avec IE :*/
- border-color : #ffffff #ffffff #ffffff #ffffff
+    font-size : 30px;
+    font-weight : bold;
+    display:block;
+    float:left;   
+    width:180px;
+    color:black;
+    text-decoration:none;
+    text-align:center;
+    padding:5px;
+    border:2px solid;
+    /*pour avoir un effet "outset" avec IE :*/
+    border-color : #ffffff #ffffff #ffffff #ffffff
 }
- 
+
 #ul_menu  li a:hover 
 {
- background-color:#EEEFEF;
- border-color : #ffffff #000000 #ffffff #000000
+    background-color:#EEEFEF;
+    border-color : #ffffff #000000 #ffffff #000000
 }
 
 #wrapper
 {
-	width:950px;
-	margin: 0 auto;
+    width:950px;
+    margin: 0 auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
-footer
+#footer
 {
-	text-align : center;
-	color : #000000;
-	margin-bottom :20px;
-	border-top : 1px;
-	border-bottom : 1px;
+    text-align : center;
+    color : #000000;
+    width: 930px;
+    margin : 0 auto;
+    vertical-align : middle;
 }
 
 #main-container
 {
     margin-top: 170px;
+}
+
+#sf-content
+{
+
+    width: 900px;
+    margin: 0 auto;
 }
