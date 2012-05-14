@@ -17,5 +17,6 @@ class familyActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
+    $this->families = Doctrine::getTable('family')->findAll();
   }
 }
