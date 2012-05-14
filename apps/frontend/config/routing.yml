@@ -8,6 +8,14 @@ contact:
 family:
   url:  /family
   param: { module: family, action: index }
+  
+family_show:
+  url: /family/:slug.html
+  param: { module: family, action: show}
+  class:   sfDoctrineRoute
+  options: { model: Family, type: object }
+  requirements:
+    sf_method: [get, post]
 
 news:
   url:  /news

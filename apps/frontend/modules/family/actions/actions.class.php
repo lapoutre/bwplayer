@@ -10,12 +10,20 @@
  */
 class familyActions extends sfActions
 {
- /**
-  * Executes index action
-  *
-  * @param sfRequest $request A request object
-  */
+
+  /**
+   * Executes index action
+   *
+   * @param sfRequest $request A request object
+   */
   public function executeIndex(sfWebRequest $request)
   {
+    $this->families = Doctrine::getTable('family')->findAll();
   }
+
+  public function executeShow(SfWebRequest $request)
+  {
+    $this->family = $this->getRoute()->getObject();
+  }
+
 }
