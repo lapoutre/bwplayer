@@ -37,6 +37,7 @@ Comment:
 Family:
  actAs:
    Timestampable: ~
+   Sluggable: ~
  tableName: family
  columns:
   name: { type: string(255), notnull: true }
