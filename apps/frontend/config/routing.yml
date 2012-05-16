@@ -49,6 +49,14 @@ shop:
   url:  /shop
   param: { module: shop, action: index }
   
+news_show:
+  url: /news/:slug.html
+  param: { module: news, action: show}
+  class:   sfDoctrineRoute
+  options: { model: Article, type: object }
+  requirements:
+    sf_method: [get, post]
+  
 shop_show:
   url: /shop/:slug.html
   param: { module: shop, action: show}
