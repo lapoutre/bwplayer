@@ -25,5 +25,17 @@ class familyActions extends sfActions
   {
     $this->family = $this->getRoute()->getObject();
   }
+  
+  public function executeArtist(SfWebRequest $request){
+    $this->families = Doctrine::getTable('family')->findByTypeFamily(1);
+  }
 
+    public function executePhoto(SfWebRequest $request){
+    $this->families = Doctrine::getTable('family')->findByTypeFamily(2);
+  }
+  
+    public function executeGraph(SfWebRequest $request){
+    $this->families = Doctrine::getTable('family')->findByTypeFamily(3);
+  }
+  
 }
