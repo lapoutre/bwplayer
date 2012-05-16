@@ -22,15 +22,14 @@
                             <li <?php if($route == "shop") echo 'class="current"' ?> style="border-left: 2px solid black;"><?php echo link_to('SHOP', 'shop') ?></li>
                             <li <?php if($route == "contact") echo 'class="current"' ?> id="even" style="border-right: 2px solid black;border-left: 2px solid black;"><?php echo link_to('CONTACT', 'contact') ?></li>
                         </ul>
-                      <div id="menu_family" style="display: none;background-color: white;z-index: 10;">
-                          <div class="family" style="width: 192px;margin-right: 250px;margin-left: 238px;border: solid 1px grey;font-size: 16px;font-weight: normal;">OK</div>
-                          <div class="family" style="width: 192px;margin-right: 250px;margin-left: 238px;border: solid 1px grey;font-size: 16px;font-weight: normal;">OK2</div>
-                          <div class="family" style="width: 192px;margin-right: 250px;margin-left: 238px;border: solid 1px grey;font-size: 16px;font-weight: normal;">OK3</div>
+                      <div id="menu_family">
+                        <div class="family" style="width: 196px;margin-left: 234px;border: solid 1px grey;font-size: 16px;font-weight: normal;"><?php echo link_to('Artistes','family/artist') ?></div>
+                          <div class="family" style="width: 196px;margin-left: 234px;border: solid 1px grey;font-size: 16px;font-weight: normal;"><?php echo link_to('Photographes','family/photo') ?></div>
+                          <div class="family" style="width: 196px;margin-left: 234px;border: solid 1px grey;font-size: 16px;font-weight: normal;"><?php echo link_to('Graphistes','family/graph') ?></div>
                       </div>
-                      <div id="menu_shop" style="display: none;background-color: white;z-index: 10;">
+                      <div id="menu_shop">
                           <div class="shop" style="width: 192px;margin-right: 250px;margin-left: 434px;border: solid 1px grey;font-size: 16px;font-weight: normal;">.OK</div>
                           <div class="shop" style="width: 192px;margin-right: 250px;margin-left: 434px;border: solid 1px grey;font-size: 16px;font-weight: normal;">.OK2</div>
-                          <div class="shop" style="width: 192px;margin-right: 250px;margin-left: 434px;border: solid 1px grey;font-size: 16px;font-weight: normal;">.OK3</div>
                       </div>
                     </div>
                   
