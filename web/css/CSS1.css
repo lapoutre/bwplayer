@@ -105,6 +105,8 @@ body{
   
   #list-family li img{
     max-width: 208px;
+    border-style: none;
+    margin-left: 0 auto;
 }
 
 #footer
