@@ -24,4 +24,13 @@ class shopActions extends sfActions
   {
     $this->product = $this->getRoute()->getObject();
   }
+  
+    public function executeRelease(SfWebRequest $request){
+    $this->products = Doctrine::getTable('product')->findByTypeProduct(1);
+  }
+  
+    public function executeMerch(SfWebRequest $request){
+    $this->products = Doctrine::getTable('product')->findByTypeProduct(2);
+  }  
+
 }

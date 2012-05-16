@@ -28,8 +28,8 @@
                           <div class="family" style="width: 196px;margin-left: 234px;border: solid 1px grey;font-size: 16px;font-weight: normal;"><?php echo link_to('Graphistes','family/graph') ?></div>
                       </div>
                       <div id="menu_shop">
-                          <div class="shop" style="width: 192px;margin-right: 250px;margin-left: 434px;border: solid 1px grey;font-size: 16px;font-weight: normal;">.OK</div>
-                          <div class="shop" style="width: 192px;margin-right: 250px;margin-left: 434px;border: solid 1px grey;font-size: 16px;font-weight: normal;">.OK2</div>
+                          <div class="shop" style="width: 192px;margin-right: 250px;margin-left: 434px;border: solid 1px grey;font-size: 16px;font-weight: normal;"><?php echo link_to('Release','shop/release') ?></div>
+                          <div class="shop" style="width: 192px;margin-right: 250px;margin-left: 434px;border: solid 1px grey;font-size: 16px;font-weight: normal;"><?php echo link_to('Merchandising','shop/merch') ?></div>
                       </div>
                     </div>
                   
