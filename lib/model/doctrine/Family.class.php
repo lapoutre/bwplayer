@@ -12,5 +12,11 @@
  */
 class Family extends BaseFamily
 {
+    const TYPE_ART = 1;
+    const TYPE_PHO = 2;
+    const TYPE_GRA = 3;
 
+    public static function getType() {
+        return array(self::TYPE_ART => "Artistes", self::TYPE_PHO => "Photographes", self::TYPE_GRA => "Graphistes");
+    }
 }

@@ -12,5 +12,11 @@
  */
 class Product extends BaseProduct
 {
+    const TYPE_RELEASE = 1;
+    const TYPE_MERC = 2;
+
+    public static function getType() {
+        return array(self::TYPE_RELEASE => "Releases", self::TYPE_MERC => "Merchandising");
+    }
 
 }
