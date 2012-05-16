@@ -1,6 +1,9 @@
 body{
     margin: 0;
     padding: 0;
+    background-image:url(/images/arpege-baniere.jpg);
+    background-repeat: repeat-x repeat-y; 
+    
 }
 
 #header
@@ -14,6 +17,7 @@ body{
 #menu
 {
     position:absolute;
+    margin-left: 45px;
 }
 
 #ul_menu 
@@ -27,6 +31,10 @@ body{
     float:left; /*pour IE*/
 }
 
+.current{
+    background-color:#EEEFEF;
+}
+
 #ul_menu  li a 
 {
     font-size : 30px;
@@ -38,15 +46,13 @@ body{
     text-decoration:none;
     text-align:center;
     padding:5px;
-    border:2px solid;
     /*pour avoir un effet "outset" avec IE :*/
-    border-color : #ffffff #ffffff #ffffff #ffffff
 }
 
 #ul_menu  li a:hover 
 {
     background-color:#EEEFEF;
-    border-color : #ffffff #000000 #ffffff #000000
+
 }
 
 #wrapper
@@ -55,6 +61,8 @@ body{
     margin: 0 auto;
     border-left: 1px solid black;
     border-right: 1px solid black;
+    padding-bottom: 50px;
+    background-color: white;
 }
 
 #family_obj{
@@ -62,49 +70,67 @@ body{
 }
 
 #ul_family{
-    
+
     display: block;
 }
 
-  #list-family{
+#list-family{
     list-style-type: none;
 
-  }
-  
-   #list-family li{
+}
+
+#list-family li{
     width: 208px;
     height: 300px;
     border-right: 1px solid grey;
     float:left;
-  }
-  
-   #list-family li h3{
+}
+
+#list-family li h3{
     text-align: center;
-  }
-  
-  #list-family li img{
+}
+
+#list-family li img{
     max-width: 208px;
-  }
+}
 
 #footer
 {
     text-align : center;
     color : #000000;
-    width: 930px;
+    width: 948px;
     margin : 0 auto;
     vertical-align : middle;
     clear: both;
-    padding-top: 25px;
+    float:left;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-left: -1px;
+    padding-right: 2px;
+    background-color: white;
 }
 
 #main-container
 {
-    margin-top: 170px;
+    margin-top: 200px;
+    margin-bottom: 100px;
 }
 
 #sf-content
 {
-
+    border-top: 2px solid black;
     width: 900px;
     margin: 0 auto;
+    padding-top: 30px;
+}
+
+#this-is-a-border{
+    margin-left: 42px;
+    margin-top: 10px;
+}
+
+#article{
+    padding-top: 15px;
+    border-bottom: 1px dotted grey;
+    padding-bottom: 15px;
 }
