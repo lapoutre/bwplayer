@@ -9,15 +9,18 @@
         <?php include_javascripts() ?>
     </head>
     <body>
+        <?php 
+            $route = sfContext::getInstance()->getRouting()->getCurrentRouteName();
+        ?>
         <div id = "wrapper">
             <div id = "header" >
-                <img src="/images/logobw.png"  width = "250px">
+                <img src="/images/logobw.png"  width = "360px"/>
                     <div id = "menu">
                         <ul id="ul_menu">
-                          <li><?php echo link_to('NEWS', 'news') ?></li>
-                            <li onmouseover="document.getElementById('menu_family').setAttribute('style','display: block;')" onmouseout="getElementById('menu_family').setAttribute('style','display: none')"><?php echo link_to('FAMILY', 'family') ?></li>
-                            <li onmouseover="document.getElementById('menu_shop').setAttribute('style','display: block;')" onmouseout="getElementById('menu_shop').setAttribute('style','display: none')"><?php echo link_to('SHOP', 'shop') ?></li>
-                            <li><?php echo link_to('CONTACT', 'contact') ?></li>
+                            <li style="border-left: 2px solid black;border-right: 2px solid black;" <?php if($route == "news") echo 'class="current"' ?>><?php echo link_to('NEWS', 'news') ?></li>
+                            <li <?php if($route == "family") echo 'class="current"' ?>><?php echo link_to('FAMILY', 'family') ?></li>
+                            <li <?php if($route == "shop") echo 'class="current"' ?> style="border-left: 2px solid black;"><?php echo link_to('SHOP', 'shop') ?></li>
+                            <li <?php if($route == "contact") echo 'class="current"' ?> id="even" style="border-right: 2px solid black;border-left: 2px solid black;"><?php echo link_to('CONTACT', 'contact') ?></li>
                         </ul>
                       <div id="menu_family" style="display: none;background-color: white;z-index: 10;">
                           <div class="family" style="width: 192px;margin-right: 250px;margin-left: 238px;border: solid 1px grey;font-size: 16px;font-weight: normal;">OK</div>
@@ -30,13 +33,15 @@
                           <div class="shop" style="width: 192px;margin-right: 250px;margin-left: 434px;border: solid 1px grey;font-size: 16px;font-weight: normal;">.OK3</div>
                       </div>
                     </div>
+                  
             </div>
             <div id = "main-container">
                 <div id="sf-content">
                     <?php echo $sf_content ?>
                 </div>
             </div>
-            <div id = "footer"> 
+            <div id = "footer">
+                <img id="this-is-a-footer-border"src="/images/border-footer.png"  width="409px" height="50px"/> 
                 <p>
                 copyright
                 </p>
