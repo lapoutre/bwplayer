@@ -23,9 +23,11 @@ abstract class BaseProductForm extends BaseFormDoctrine
       'description'  => new sfWidgetFormTextarea(),
       'soundcloud'   => new sfWidgetFormInputText(),
       'prix'         => new sfWidgetFormInputText(),
-      'family_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Family'), 'add_empty' => false)),
+      'family_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Family'), 'add_empty' => true)),
+      'type_product' => new sfWidgetFormInputText(),
       'created_at'   => new sfWidgetFormDateTime(),
       'updated_at'   => new sfWidgetFormDateTime(),
+      'slug'         => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -37,10 +39,16 @@ abstract class BaseProductForm extends BaseFormDoctrine
       'description'  => new sfValidatorString(),
       'soundcloud'   => new sfValidatorString(array('max_length' => 255)),
       'prix'         => new sfValidatorString(array('max_length' => 255)),
-      'family_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Family'))),
+      'family_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Family'), 'required' => false)),
+      'type_product' => new sfValidatorPass(),
       'created_at'   => new sfValidatorDateTime(),
       'updated_at'   => new sfValidatorDateTime(),
+      'slug'         => new sfValidatorString(array('max_length' => 255, 'required' => false)),
     ));
+
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'Product', 'column' => array('slug')))
+    );
 
     $this->widgetSchema->setNameFormat('product[%s]');
 

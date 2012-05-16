@@ -35,6 +35,9 @@ class ProductForm extends BaseProductForm
         'class'   =>  'tiny_mce'
       )
     );
+      
+      $this->widgetSchema['type_product'] = new sfWidgetFormChoice(array('choices' => Product::getType()));
+      
       unset($this['created_at'], $this['updated_at']);
   }
 }

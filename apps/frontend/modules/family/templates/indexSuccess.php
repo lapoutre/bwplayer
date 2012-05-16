@@ -1,4 +1,3 @@
-FAMILY <br>
 <div id="ul_family">
   <ul id="list-family">
     <?php foreach ($families as $i => $f) : ?>

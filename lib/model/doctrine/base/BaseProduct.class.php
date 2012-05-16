@@ -13,6 +13,7 @@
  * @property string $soundcloud
  * @property string $prix
  * @property integer $family_id
+ * @property int $type_product
  * @property Family $Family
  * 
  * @method string  getName()         Returns the current record's "name" value
@@ -23,6 +24,7 @@
  * @method string  getSoundcloud()   Returns the current record's "soundcloud" value
  * @method string  getPrix()         Returns the current record's "prix" value
  * @method integer getFamilyId()     Returns the current record's "family_id" value
+ * @method int     getTypeProduct()  Returns the current record's "type_product" value
  * @method Family  getFamily()       Returns the current record's "Family" value
  * @method Product setName()         Sets the current record's "name" value
  * @method Product setTracklist()    Sets the current record's "tracklist" value
@@ -32,6 +34,7 @@
  * @method Product setSoundcloud()   Sets the current record's "soundcloud" value
  * @method Product setPrix()         Sets the current record's "prix" value
  * @method Product setFamilyId()     Sets the current record's "family_id" value
+ * @method Product setTypeProduct()  Sets the current record's "type_product" value
  * @method Product setFamily()       Sets the current record's "Family" value
  * 
  * @package    bwrecords
@@ -79,7 +82,11 @@ abstract class BaseProduct extends sfDoctrineRecord
              ));
         $this->hasColumn('family_id', 'integer', null, array(
              'type' => 'integer',
+             ));
+        $this->hasColumn('type_product', 'int', 1, array(
+             'type' => 'int',
              'notnull' => true,
+             'length' => 1,
              ));
 
         $this->option('collate', 'utf8_unicode_ci');
@@ -95,6 +102,8 @@ abstract class BaseProduct extends sfDoctrineRecord
              'onDelete' => 'cascade'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
+        $sluggable0 = new Doctrine_Template_Sluggable();
         $this->actAs($timestampable0);
+        $this->actAs($sluggable0);
     }
 }
