@@ -9,6 +9,30 @@ family:
   url:  /family
   param: { module: family, action: index }
   
+family_artist:
+  url: /family/:slug.html
+  param: { module: family, action: show}
+  class:   sfDoctrineRoute
+  options: { model: Family, type: object }
+  requirements:
+    sf_method: [get, post]
+
+family_photo:
+  url: /family/:slug.html
+  param: { module: family, action: show}
+  class:   sfDoctrineRoute
+  options: { model: Family, type: object }
+  requirements:
+    sf_method: [get, post]
+
+family_graph:
+  url: /family/:slug.html
+  param: { module: family, action: show}
+  class:   sfDoctrineRoute
+  options: { model: Family, type: object }
+  requirements:
+    sf_method: [get, post]
+
 family_show:
   url: /family/:slug.html
   param: { module: family, action: show}
