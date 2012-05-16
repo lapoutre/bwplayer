@@ -64,6 +64,8 @@ body{
 #ul_family{
     
     display: block;
+    width: 667px;
+    margin-left: 97px;
 }
 
   #list-family{
@@ -75,11 +77,13 @@ body{
     width: 208px;
     height: 300px;
     border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
     float:left;
   }
   
    #list-family li h3{
     text-align: center;
+/*    text-decoration: none;*/
   }
   
   #list-family li img{

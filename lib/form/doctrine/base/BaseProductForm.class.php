@@ -26,6 +26,7 @@ abstract class BaseProductForm extends BaseFormDoctrine
       'family_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Family'), 'add_empty' => false)),
       'created_at'   => new sfWidgetFormDateTime(),
       'updated_at'   => new sfWidgetFormDateTime(),
+      'slug'         => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -40,7 +41,12 @@ abstract class BaseProductForm extends BaseFormDoctrine
       'family_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Family'))),
       'created_at'   => new sfValidatorDateTime(),
       'updated_at'   => new sfValidatorDateTime(),
+      'slug'         => new sfValidatorString(array('max_length' => 255, 'required' => false)),
     ));
+
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'Product', 'column' => array('slug')))
+    );
 
     $this->widgetSchema->setNameFormat('product[%s]');
 

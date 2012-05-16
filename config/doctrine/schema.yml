@@ -56,6 +56,7 @@ Family:
 Product:
  actAs:
   Timestampable: ~
+  Sluggable: ~
  tableName: product
  columns:
   name: { type: string(255), notnull: true }
