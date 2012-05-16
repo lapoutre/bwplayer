@@ -7,6 +7,10 @@ article:
     title: "News 2"
     body: "Body 2"
     pic: "/img/yop2.png"
+  article_3:
+    title: "BWR009"
+    body: "NEW RELEASE ! NOUVELLE SORTIE ! BWR009 // Bolivard - DRAGONS EP ! Available now ! Maintenant disponible !"
+    pic: "/img/yop.png"
     
 comment:
   comment_1:

@@ -17,6 +17,11 @@ class newsActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    
+    $this->news = Doctrine::getTable('article')->findAll();
+  }
+  
+  public function executeShow(sfWebRequest $request)
+  {
+    $this->article = $this->getRoute()->getObject();
   }
 }
