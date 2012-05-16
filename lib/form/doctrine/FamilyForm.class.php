@@ -49,6 +49,9 @@ class FamilyForm extends BaseFamilyForm
         'class'   =>  'tiny_mce'
       )
     );
+    
+    $this->widgetSchema['type_family'] = new sfWidgetFormChoice(array('choices' => Family::getType()));
+    
     unset($this['created_at'], $this['updated_at']);
   }
   
