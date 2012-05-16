@@ -24,6 +24,14 @@ news:
 shop:
   url:  /shop
   param: { module: shop, action: index }
+  
+shop_show:
+  url: /shop/:slug.html
+  param: { module: shop, action: show}
+  class:   sfDoctrineRoute
+  options: { model: Product, type: object }
+  requirements:
+    sf_method: [get, post]
 
 # default rules
 homepage:

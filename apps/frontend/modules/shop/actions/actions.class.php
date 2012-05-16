@@ -17,5 +17,11 @@ class shopActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
+    $this->products = Doctrine::getTable('product')->findAll();
+  }
+
+  public function executeShow(SfWebRequest $request)
+  {
+    $this->product = $this->getRoute()->getObject();
   }
 }
