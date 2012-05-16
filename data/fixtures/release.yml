@@ -49,3 +49,23 @@ product:
   prix:         '5,99€'
   family_id:    2
   type_product: 1
+ Merch:
+  name:         'Merch'
+  tracklist:    'Merch'
+  release_date: '30/12/2011'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  description:  'Merch'
+  soundcloud:   'http://wwww.soundcloud.com/torpen'
+  prix:         '4,99€'
+  family_id:    2
+  type_product: 2
+ Merch 2:
+  name:         'Merch 2'
+  tracklist:    'Merch'
+  release_date: '30/12/2011'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  description:  'Merch 2'
+  soundcloud:   'http://wwww.soundcloud.com/torpen'
+  prix:         '5,99€'
+  family_id:    2
+  type_product: 2
