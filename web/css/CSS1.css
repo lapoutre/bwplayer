@@ -151,7 +151,17 @@ body{
     padding-bottom: 15px;
 }
 
+#article h3 {
+    width: 100%;
+}
+
 #article h3 a {
     text-decoration: none;
     color: black;
+    width: 100%;
+}
+
+#le-date-string{
+    font-size: small;
+    color: grey;
 }
