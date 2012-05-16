@@ -55,6 +55,7 @@ body{
 
 }
 
+
 #wrapper
 {
     width:950px;
@@ -148,4 +149,9 @@ body{
     padding-top: 15px;
     border-bottom: 1px dotted grey;
     padding-bottom: 15px;
+}
+
+#article h3 a {
+    text-decoration: none;
+    color: black;
 }
