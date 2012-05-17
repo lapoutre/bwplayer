@@ -1,5 +1,6 @@
-<form style="text-align: center">
-  your email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"><br><br><br><br>
-  message:&nbsp;&nbsp;<textarea rows="10"  style="width: 867px;"></textarea><br>
-  <input type="button" value="Send">
+<form id="form_contact" method="post" action="<?php echo url_for('@contact') ?>" style="text-align: center">
+  <?php echo $form->renderHiddenFields(false) ?>
+  your email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $form['email']->render(array()) ?><br><br><br><br>
+  message:&nbsp;&nbsp;<?php echo $form['message']->render(array('style' => 'width:867px', 'rows' => '10')) ?><br>
+  <input type="submit" value="Send">
 </form>

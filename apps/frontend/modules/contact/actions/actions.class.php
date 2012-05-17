@@ -17,5 +17,21 @@ class contactActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
+    $this->form = new ContactForm();
+    
+        if ($request->isMethod('post')) {
+      $this->form->bind($request->getParameter($this->form->getName()), $request->getFiles($this->form->getName()));
+      if ($this->form->isValid()) {
+        $this->form->save();
+        $this->forward('contact', 'contact');
+      }
+      $this->getUser()->setFlash('error', 'Veuillez vérifier votre saisie.');
+    }
+    
   }
+  
+  public function executeContact(sfWebRequest $request){
+    
+  }
+  
 }
