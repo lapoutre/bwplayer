@@ -28,14 +28,53 @@ class familyActions extends sfActions
   
   public function executeArtist(SfWebRequest $request){
     $this->families = Doctrine::getTable('family')->findByTypeFamily(1);
+    
+        $q = Doctrine_Query::create()
+    ->from('Family f')
+    ->where('f.type_family = ?', 1);
+
+    $this->pager = new sfDoctrinePager(
+                    'Family',
+                    sfConfig::get('app_max_items_on_page')
+    );
+    $this->pager->setQuery($q);
+    $this->pager->setPage($request->getParameter('page', 1));
+    $this->pager->init();
+    
   }
 
     public function executePhoto(SfWebRequest $request){
     $this->families = Doctrine::getTable('family')->findByTypeFamily(2);
+        
+        $q = Doctrine_Query::create()
+    ->from('Family f')
+    ->where('f.type_family = ?', 2);
+
+    $this->pager = new sfDoctrinePager(
+                    'Family',
+                    sfConfig::get('app_max_items_on_page')
+    );
+    $this->pager->setQuery($q);
+    $this->pager->setPage($request->getParameter('page', 1));
+    $this->pager->init();
+    
   }
   
     public function executeGraph(SfWebRequest $request){
     $this->families = Doctrine::getTable('family')->findByTypeFamily(3);
+        
+        $q = Doctrine_Query::create()
+    ->from('Family f')
+    ->where('f.type_family = ?', 3);
+
+    $this->pager = new sfDoctrinePager(
+                    'Family',
+                    sfConfig::get('app_max_items_on_page')
+    );
+    $this->pager->setQuery($q);
+    $this->pager->setPage($request->getParameter('page', 1));
+    $this->pager->init();
+    
   }
   
 }
