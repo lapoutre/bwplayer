@@ -1,0 +1,71 @@
+product:
+ Stand_up:
+  name:         'Stand Up And Testify'
+  tracklist:    '01 - Stand up and testify'
+  release_date: '30/01/2012'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  description:  'premier EP'
+  soundcloud:   'http://wwww.soundcloud.com/squirhell'
+  prix:         '4,99€'
+  family_id:    1
+  type_product: 1
+ Stand_up 2:
+  name:         'Stand Up And Testify 2'
+  tracklist:    '01 - Stand up and testify 2'
+  release_date: '30/01/2012'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  description:  'premier EP 2'
+  soundcloud:   'http://wwww.soundcloud.com/squirhell'
+  prix:         '5,99€'
+  family_id:    1
+  type_product: 1
+ Stand_up 3:
+  name:         'Stand Up And Testify 3'
+  tracklist:    '01 - Stand up and testify 3'
+  release_date: '30/01/2012'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  description:  'premier EP 3'
+  soundcloud:   'http://wwww.soundcloud.com/squirhell'
+  prix:         '6,99€'
+  family_id:    1
+  type_product: 1
+ Born_in:
+  name:         'Born in the 90s'
+  tracklist:    '01 - Born in the 90s'
+  release_date: '30/12/2011'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  description:  'premier EP'
+  soundcloud:   'http://wwww.soundcloud.com/torpen'
+  prix:         '4,99€'
+  family_id:    2
+  type_product: 1
+ Born_in 2:
+  name:         'Born in the 90s 2'
+  tracklist:    '01 - Born in the 90s 2'
+  release_date: '30/12/2011'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  description:  'premier EP 2'
+  soundcloud:   'http://wwww.soundcloud.com/torpen'
+  prix:         '5,99€'
+  family_id:    2
+  type_product: 1
+ Merch:
+  name:         'Merch'
+  tracklist:    'Merch'
+  release_date: '30/12/2011'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  description:  'Merch'
+  soundcloud:   'http://wwww.soundcloud.com/torpen'
+  prix:         '4,99€'
+  family_id:    2
+  type_product: 2
+ Merch 2:
+  name:         'Merch 2'
+  tracklist:    'Merch'
+  release_date: '30/12/2011'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  description:  'Merch 2'
+  soundcloud:   'http://wwww.soundcloud.com/torpen'
+  prix:         '5,99€'
+  family_id:    2
+  type_product: 2

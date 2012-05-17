@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           comment
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          comment
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        object_actions:
+          setApprove:
+            label: Approve
+            condition:
+              function: getApprove
+              invert: false
+          _edit: ~
+          _delete: ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

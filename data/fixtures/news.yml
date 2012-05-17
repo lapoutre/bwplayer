@@ -1,0 +1,30 @@
+article:
+  article_1:
+    title: "Première News !"
+    body: "Bouge ton premier body"
+    pic: "/img/yop.png"
+  article_2:
+    title: "News 2"
+    body: "Body 2"
+    pic: "/img/yop2.png"
+  article_3:
+    title: "BWR009"
+    body: "NEW RELEASE ! NOUVELLE SORTIE ! BWR009 // Bolivard - DRAGONS EP ! Available now ! Maintenant disponible !"
+    pic: "/img/yop.png"
+    
+comment:
+  comment_1:
+    nick: "nick 1"
+    message: "message 1"
+    is_approved: false
+    article_id: 1
+  comment_2:
+    nick: "nick 2"
+    message: "message 2"
+    is_approved: true
+    article_id: 1
+  comment_3:
+    nick: "nick 3"
+    message: "message 3"
+    is_approved: false
+    article_id: 2

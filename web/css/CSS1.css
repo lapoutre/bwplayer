@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebuc.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebucit.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebucbi.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebucbd.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Centaur';
+    src: url('../fonts/GOTHIC.TTF');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image:url(/images/arpege-baniere.jpg);
+    background-repeat: repeat-x repeat-y; 
+
+}
+
+#header
+{
+    font-size : 60px;
+    font-weight : bold;
+    text-align : center;
+    vertical-align : middle;
+}
+
+#menu
+{
+    position:absolute;
+    margin-left: 45px;
+}
+
+#ul_menu 
+{
+    list-style-type:none;
+}
+
+#ul_menu  li 
+{
+    margin-left:2px;
+    float:left; /*pour IE*/
+}
+
+.current{
+    background-color:#EEEFEF;
+}
+
+.root
+{
+    font-size : 30px;
+    font-weight : bold;
+    font-family: Centaur, serif;
+    display:block;  
+    width:180px;
+    color:black;
+    text-decoration:none;
+    text-align:center;
+    padding:5px;
+    /*pour avoir un effet "outset" avec IE :*/
+}
+
+#ul_menu  li a .root:hover 
+{
+    background-color:#EEEFEF;
+
+}
+
+
+#wrapper
+{
+    width:950px;
+    margin: 0 auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-bottom: 50px;
+    background-color: white;
+}
+
+#family_obj{
+    top:5px;
+    background-color: white;
+
+}
+
+#ul_family{
+
+    display: block;
+    width: 100%;
+    margin-left: 0 auto;
+}
+
+#list-family{
+    list-style-type: none;
+    padding-left: 96px;
+    vertical-align : middle;
+
+}
+
+#list-family li{
+    width: 220px;
+    height: 242px;
+    border-right: 2px dashed black;
+    border-bottom: 2px dashed black;
+    border-top: 2px dashed black;
+    border-left: 2px dashed black;
+    float:left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+
+#list-family li h3{
+    text-align: center;
+    /*    text-decoration: none;*/
+}
+
+#list-family li img{
+    border-style: none;
+    margin: 0 auto;
+    vertical-align: middle;
+    width: 220px;
+}
+
+#footer
+{
+    text-align : center;
+    color : #000000;
+    width: 948px;
+    margin : 0 auto;
+    vertical-align : middle;
+    clear: both;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    margin-left: -1px;
+    padding-right: 2px;
+    padding-top: 30px;
+    background-color: white;
+}
+
+#main-container
+{
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+#sf-content
+{
+    border-top: 2px solid black;
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 30px;
+    font-family: Trebuchet MS, serif;
+}
+
+#sf-content h3
+{
+    font-family: Trebuchet MS, serif;
+    font-weight: normal;
+    font-size: xx-large;
+}
+
+#this-is-a-border{
+    margin-left: 42px;
+    margin-top: 10px;
+}
+
+#article{
+    padding-top: 15px;
+    border-bottom: 1px dotted grey;
+    padding-bottom: 15px;
+}
+
+div .h3  {
+    font-family: Trebuchet MS, serif;
+    color: black;
+    width: 100%;
+    font-size: large;
+    font-weight: bold;
+}
+
+div .h3:hover  {
+    color: black;
+    width: 100%;
+    font-size: large;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#le-date-string{
+    font-size: smaller;
+    font-style: italic;
+    color: grey;
+}
+
+#news-content{
+    font-family: Trebuchet MS, serif;
+}
+
+.content-body{
+    margin-top:50px;
+    margin-left:5px;
+}
+
+div .h3-gallery{
+    font-family: Trebuchet MS, serif;
+    color: black;
+    width: 100%;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+li .family{
+    margin-top: -40px;
+    clear: both;
+    z-index:-20;
+}
+
+li .shop{
+    margin-top: -40px;
+    clear: both;
+}
+
+ul{
+    list-style-type:none;
+}
+
+.ssroot{
+    text-decoration:none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Centaur, serif;
+    color: black;
+}
+
+.ssroot:hover  {
+    text-decoration: underline;
+}
+
+ul #ssli-family{
+    width:100%;
+}
+
+/*li .shop{
+    display:none;
+}*/
+
+div #menu_shop{
+    float: left;    
+    margin-left: 0;
+    margin-top: -62px;
+}
+
