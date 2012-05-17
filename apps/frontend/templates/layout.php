@@ -9,30 +9,31 @@
         <?php include_javascripts() ?>
     </head>
     <body>
-        <?php 
-            $route = sfContext::getInstance()->getRouting()->getCurrentRouteName();
+        <?php
+        $route = sfContext::getInstance()->getRouting()->getCurrentInternalUri();
         ?>
         <div id = "wrapper">
             <div id = "header" >
                 <img src="/images/logobw.png"  width = "360px"/>
-                    <div id = "menu">
-                        <ul id="ul_menu">
-                            <li style="border-left: 2px solid black;border-right: 2px solid black;" <?php if($route == "news") echo 'class="current"' ?>><?php echo link_to('NEWS', 'news') ?></li>
-                            <li <?php if($route == "family") echo 'class="current"' ?>><a href="#">FAMILY</a></li>
-                            <li <?php if($route == "shop") echo 'class="current"' ?> style="border-left: 2px solid black;"><a href="#">SHOP</a></li>
-                            <li <?php if($route == "contact") echo 'class="current"' ?> id="even" style="border-right: 2px solid black;border-left: 2px solid black;"><?php echo link_to('CONTACT', 'contact') ?></li>
-                        </ul>
-                      <div id="menu_family">
-                        <div class="family" style="width: 196px;margin-left: 234px;border: solid 1px grey;font-size: 16px;font-weight: normal;"><?php echo link_to('Artistes','family/artist') ?></div>
-                          <div class="family" style="width: 196px;margin-left: 234px;border: solid 1px grey;font-size: 16px;font-weight: normal;"><?php echo link_to('Photographes','family/photo') ?></div>
-                          <div class="family" style="width: 196px;margin-left: 234px;border: solid 1px grey;font-size: 16px;font-weight: normal;"><?php echo link_to('Graphistes','family/graph') ?></div>
-                      </div>
-                      <div id="menu_shop">
-                          <div class="shop" style="width: 192px;margin-right: 250px;margin-left: 434px;border: solid 1px grey;font-size: 16px;font-weight: normal;"><?php echo link_to('Release','shop/release') ?></div>
-                          <div class="shop" style="width: 192px;margin-right: 250px;margin-left: 434px;border: solid 1px grey;font-size: 16px;font-weight: normal;"><?php echo link_to('Merchandising','shop/merch') ?></div>
-                      </div>
-                    </div>
-                  
+                <div id = "menu">
+                    <ul id="ul_menu">
+                        <li id="li-news" style="border-left: 2px solid black;border-right: 2px solid black;" <?php if (preg_match("/news/", $route)) echo 'class="current"' ?>><?php echo link_to('NEWS', 'news', array() ,array('class' => 'root')) ?></li>
+                        <li id="li-family" <?php if (preg_match("/family/", $route)) echo 'class="current"' ?>><a href="#" class="root">FAMILY</a>
+                            <ul id="ssli-family">
+                                <li class="family"><?php echo link_to('Artistes', 'family_artist', array(),array('class' => 'ssroot')) ?></li>
+                                <li class="family"><?php echo link_to('Photographes', 'family_photo', array(),array('class' => 'ssroot')) ?></li>
+                                <li class="family"><?php echo link_to('Graphistes', 'family_graph', array() ,array('class' => 'ssroot')) ?></li> 
+                            </ul>
+                        </li>
+                        <li id="li-shop" <?php if (preg_match("/shop/", $route)) echo 'class="current"' ?> ><a href="#" class="root" style="border-left: 2px solid black;">SHOP</a>
+                            <ul id="ssli-shop">
+                                <li class="shop"><?php echo link_to('Release', 'shop_release', array() , array('class' => 'ssroot')) ?></li>
+                                <li class="shop"><?php echo link_to('Merchandising', 'shop_merch', array() , array('class' => 'ssroot')) ?></li>
+                            </ul>
+                        </li>
+                        <li id="li-contact" <?php if (preg_match("/contact/", $route)) echo 'class="current"' ?> id="even" style="border-right: 2px solid black;border-left: 2px solid black;"><?php echo link_to('CONTACT', 'contact', array(), array('class' => 'root')) ?></li>
+                    </ul>
+                </div>
             </div>
             <div id = "main-container">
                 <div id="sf-content">
@@ -42,7 +43,7 @@
             <div id = "footer">
                 <img id="this-is-a-footer-border"src="/images/border-footer.png"  width="409px" height="50px"/> 
                 <p>
-                copyright
+                    copyright
                 </p>
             </div>
         </div>
