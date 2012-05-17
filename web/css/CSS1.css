@@ -1,32 +1,32 @@
 @font-face {
-	font-family: 'Trebuchet MS';
-	src: url('../fonts/trebuc.ttf');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebuc.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-	font-family: 'Trebuchet MS';
-	src: url('../fonts/trebucit.ttf');
-	font-weight: normal;
-	font-style: italic;
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebucit.ttf');
+    font-weight: normal;
+    font-style: italic;
 }
 @font-face {
-	font-family: 'Trebuchet MS';
-	src: url('../fonts/trebucbi.ttf');
-	font-weight: bold;
-	font-style: italic;
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebucbi.ttf');
+    font-weight: bold;
+    font-style: italic;
 }
 @font-face {
-	font-family: 'Trebuchet MS';
-	src: url('../fonts/trebucbd.ttf');
-	font-weight: bold;
-	font-style: normal;
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebucbd.ttf');
+    font-weight: bold;
+    font-style: normal;
 }
 @font-face {
-	font-family: 'Centaur';
-	src: url('../fonts/GOTHIC.TTF');
-	font-weight: bold;
-	font-style: normal;
+    font-family: 'Centaur';
+    src: url('../fonts/GOTHIC.TTF');
+    font-weight: bold;
+    font-style: normal;
 }
 
 
@@ -35,7 +35,7 @@ body{
     padding: 0;
     background-image:url(/images/arpege-baniere.jpg);
     background-repeat: repeat-x repeat-y; 
-    
+
 }
 
 #header
@@ -67,7 +67,7 @@ body{
     background-color:#EEEFEF;
 }
 
-#ul_menu  li a 
+.root
 {
     font-size : 30px;
     font-weight : bold;
@@ -82,7 +82,7 @@ body{
     /*pour avoir un effet "outset" avec IE :*/
 }
 
-#ul_menu  li a:hover 
+#ul_menu  li a .root:hover 
 {
     background-color:#EEEFEF;
 
@@ -102,7 +102,7 @@ body{
 #family_obj{
     top:5px;
     background-color: white;
-    
+
 }
 
 #ul_family{
@@ -129,15 +129,15 @@ body{
     float:left;
     margin-right: 20px;
     margin-bottom: 20px;
-    
+
 }
 
 #list-family li h3{
     text-align: center;
-/*    text-decoration: none;*/
-  }
-  
-  #list-family li img{
+    /*    text-decoration: none;*/
+}
+
+#list-family li img{
     border-style: none;
     margin: 0 auto;
     vertical-align: middle;
@@ -232,3 +232,38 @@ div .h3-gallery{
     font-weight: bold;
     text-align: center;
 }
+
+/*li .family{
+    display:none;
+}*/
+
+ul .ssli-family{
+    list-style-type:none;
+}
+
+.ssroot{
+    text-decoration:none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Centaur, serif;
+    color: black;
+}
+
+.ssroot:hover  {
+    text-decoration: underline;
+}
+
+ul .ssli-shop{
+    list-style-type:none;
+}
+
+/*li .shop{
+    display:none;
+}*/
+
+div #menu_shop{
+    float: left;    
+    margin-left: 0;
+    margin-top: -62px;
+}
+
