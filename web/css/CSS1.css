@@ -1,3 +1,35 @@
+@font-face {
+	font-family: 'Trebuchet MS';
+	src: url('../fonts/trebuc.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Trebuchet MS';
+	src: url('../fonts/trebucit.ttf');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Trebuchet MS';
+	src: url('../fonts/trebucbi.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Trebuchet MS';
+	src: url('../fonts/trebucbd.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Centaur';
+	src: url('../fonts/GOTHIC.TTF');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
 body{
     margin: 0;
     padding: 0;
@@ -82,21 +114,21 @@ body{
 
 #list-family{
     list-style-type: none;
-    padding-left: 100px;
+    padding-left: 96px;
     vertical-align : middle;
 
 }
 
 #list-family li{
     width: 220px;
-    height: 300px;
+    height: 242px;
     border-right: 2px dashed black;
     border-bottom: 2px dashed black;
     border-top: 2px dashed black;
     border-left: 2px dashed black;
     float:left;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     
 }
 
