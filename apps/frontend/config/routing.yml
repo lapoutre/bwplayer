@@ -10,31 +10,31 @@ family:
   param: { module: family, action: index }
   
 family_artist:
-  url: /family/:slug.html
-  param: { module: family, action: show}
+  url: /family/arist.html
+  param: { module: family, action: artist}
   class:   sfDoctrineRoute
   options: { model: Family, type: object }
   requirements:
     sf_method: [get, post]
 
 family_photo:
-  url: /family/:slug.html
-  param: { module: family, action: show}
+  url: /family/photo.html
+  param: { module: family, action: photo}
   class:   sfDoctrineRoute
   options: { model: Family, type: object }
   requirements:
     sf_method: [get, post]
 
 family_graph:
-  url: /family/:slug.html
-  param: { module: family, action: show}
+  url: /family/graph.html
+  param: { module: family, action: graph}
   class:   sfDoctrineRoute
   options: { model: Family, type: object }
   requirements:
     sf_method: [get, post]
 
 family_show:
-  url: /family/:slug.html
+  url: /family/show/:slug.html
   param: { module: family, action: show}
   class:   sfDoctrineRoute
   options: { model: Family, type: object }
@@ -42,7 +42,7 @@ family_show:
     sf_method: [get, post]
 
 news:
-  url:  /news
+  url:  /news.html
   param: { module: news, action: index }
   
 shop:
@@ -50,7 +50,7 @@ shop:
   param: { module: shop, action: index }
   
 shop_show:
-  url: /shop/:slug.html
+  url: /shop/show/:slug.html
   param: { module: shop, action: show}
   class:   sfDoctrineRoute
   options: { model: Product, type: object }
@@ -58,7 +58,7 @@ shop_show:
     sf_method: [get, post]
   
 shop_release:
-  url: /shop/:slug.html
+  url: /shop/release.html
   param: { module: shop, action: release}
   class:   sfDoctrineRoute
   options: { model: Product, type: object }
@@ -66,7 +66,7 @@ shop_release:
     sf_method: [get, post]
   
 shop_merch:
-  url: /merch/:slug.html
+  url: /shop/merch.html
   param: { module: shop, action: merch}
   class:   sfDoctrineRoute
   options: { model: Product, type: object }
@@ -74,7 +74,7 @@ shop_merch:
     sf_method: [get, post]
 
 news_show:
-  url: /news/:slug.html
+  url: /news/show/:slug.html
   param: { module: news, action: show}
   class:   sfDoctrineRoute
   options: { model: Article, type: object }
