@@ -21,7 +21,7 @@ class newsActions extends sfActions
 
     $this->pager = new sfDoctrinePager(
                     'Article',
-                    sfConfig::get('app_max_items_on_page')
+                    sfConfig::get('app_max_items_on_news')
     );
     $this->pager->setPage($request->getParameter('page', 1));
     $this->pager->init();
