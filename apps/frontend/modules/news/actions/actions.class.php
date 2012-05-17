@@ -18,6 +18,14 @@ class newsActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     $this->news = Doctrine::getTable('article')->findAll();
+
+    $this->pager = new sfDoctrinePager(
+                    'Article',
+                    sfConfig::get('app_max_items_on_page')
+    );
+    $this->pager->setPage($request->getParameter('page', 1));
+    $this->pager->init();
+    
   }
   
   public function executeShow(sfWebRequest $request)

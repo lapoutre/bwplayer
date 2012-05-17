@@ -1,3 +1,4 @@
+<?php foreach ($products as $i => $product) : ?>
 <div id="family_obj">
   <li>
     <div class="h3-gallery"><?php //echo $family->getName(); ?><?php echo link_to($product->getName(), "shop_show", $product, array('style' => 'text-decoration: none;color: black;')) ?></div>
@@ -6,3 +7,4 @@
     <?php // echo link ?>
   </li>
 </div>
+    <?php endforeach; ?>
