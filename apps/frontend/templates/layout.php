@@ -20,7 +20,8 @@
                         <li id="li-news" style="border-left: 2px solid black;border-right: 2px solid black;" <?php if (preg_match("/news/", $route)) echo 'class="current"' ?>><?php echo link_to('NEWS', 'news', array() ,array('class' => 'root')) ?></li>
                         <li id="li-family" <?php if (preg_match("/family/", $route)) echo 'class="current"' ?>><a href="#" class="root">FAMILY</a>
                             <ul id="ssli-family">
-                                <li class="family"><?php echo link_to('Artistes', 'family_artist', array(),array('class' => 'ssroot')) ?></li>
+                                <li class="family"><?php echo link_to('Artistes', 'family_artist', array(),array('class' => 'ssroot',
+                                                                                                                 'style' => 'z-index:20;'                       )) ?></li>
                                 <li class="family"><?php echo link_to('Photographes', 'family_photo', array(),array('class' => 'ssroot')) ?></li>
                                 <li class="family"><?php echo link_to('Graphistes', 'family_graph', array() ,array('class' => 'ssroot')) ?></li> 
                             </ul>

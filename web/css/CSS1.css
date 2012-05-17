@@ -72,8 +72,7 @@ body{
     font-size : 30px;
     font-weight : bold;
     font-family: Centaur, serif;
-    display:block;
-    float:left;   
+    display:block;  
     width:180px;
     color:black;
     text-decoration:none;
@@ -233,11 +232,18 @@ div .h3-gallery{
     text-align: center;
 }
 
-/*li .family{
-    display:none;
-}*/
+li .family{
+    margin-top: -40px;
+    clear: both;
+    z-index:-20;
+}
 
-ul .ssli-family{
+li .shop{
+    margin-top: -40px;
+    clear: both;
+}
+
+ul{
     list-style-type:none;
 }
 
@@ -253,8 +259,8 @@ ul .ssli-family{
     text-decoration: underline;
 }
 
-ul .ssli-shop{
-    list-style-type:none;
+ul #ssli-family{
+    width:100%;
 }
 
 /*li .shop{
