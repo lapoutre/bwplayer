@@ -29,18 +29,16 @@
     font-style: normal;
 }
 
-
 body{
     margin: 0;
     padding: 0;
     background-image:url(/images/arpege-baniere.jpg);
     background-repeat: repeat-x repeat-y; 
-
+    height: 100%;
 }
 
 #header
 {
-    font-size : 60px;
     font-weight : bold;
     text-align : center;
     vertical-align : middle;
@@ -81,11 +79,11 @@ body{
     /*pour avoir un effet "outset" avec IE :*/
 }
 
-#ul_menu  li a .root:hover 
+/*#ul_menu  li a .root:hover 
 {
     background-color:#EEEFEF;
 
-}
+}*/
 
 
 #wrapper
@@ -94,8 +92,9 @@ body{
     margin: 0 auto;
     border-left: 1px solid black;
     border-right: 1px solid black;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
     background-color: white;
+    height: 100%;
 }
 
 #family_obj{
@@ -157,12 +156,12 @@ body{
     padding-right: 2px;
     padding-top: 30px;
     background-color: white;
+    height:100%;
 }
 
 #main-container
 {
-    margin-top: 200px;
-    margin-bottom: 100px;
+    margin-top: 160px;
 }
 
 #sf-content
@@ -233,14 +232,15 @@ div .h3-gallery{
 }
 
 li .family{
-    margin-top: -40px;
     clear: both;
-    z-index:-20;
+    display : block ;
+    height: 30px;
 }
 
 li .shop{
-    margin-top: -40px;
     clear: both;
+    display : block ;
+    height: 30px;
 }
 
 ul{
@@ -261,6 +261,12 @@ ul{
 
 ul #ssli-family{
     width:100%;
+    display:none;
+}
+
+ul #ssli-shop{
+    width:100%;
+    display:none;
 }
 
 /*li .shop{
@@ -273,3 +279,18 @@ div #menu_shop{
     margin-top: -62px;
 }
 
+.pagination {
+    padding-top:100px;
+    color:black;
+    text-align: center;
+    clear: both;
+     
+}
+.pagination a{
+    text-decoration: none;
+    color:black;
+}
+.pagination a:hover{
+    text-decoration: underline;
+    color:black;
+}
