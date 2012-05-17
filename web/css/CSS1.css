@@ -1,46 +1,44 @@
 @font-face {
-	font-family: 'Trebuchet MS';
-	src: url('../fonts/trebuc.ttf');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebuc.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-	font-family: 'Trebuchet MS';
-	src: url('../fonts/trebucit.ttf');
-	font-weight: normal;
-	font-style: italic;
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebucit.ttf');
+    font-weight: normal;
+    font-style: italic;
 }
 @font-face {
-	font-family: 'Trebuchet MS';
-	src: url('../fonts/trebucbi.ttf');
-	font-weight: bold;
-	font-style: italic;
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebucbi.ttf');
+    font-weight: bold;
+    font-style: italic;
 }
 @font-face {
-	font-family: 'Trebuchet MS';
-	src: url('../fonts/trebucbd.ttf');
-	font-weight: bold;
-	font-style: normal;
+    font-family: 'Trebuchet MS';
+    src: url('../fonts/trebucbd.ttf');
+    font-weight: bold;
+    font-style: normal;
 }
 @font-face {
-	font-family: 'Centaur';
-	src: url('../fonts/GOTHIC.TTF');
-	font-weight: bold;
-	font-style: normal;
+    font-family: 'Centaur';
+    src: url('../fonts/GOTHIC.TTF');
+    font-weight: bold;
+    font-style: normal;
 }
-
 
 body{
     margin: 0;
     padding: 0;
     background-image:url(/images/arpege-baniere.jpg);
     background-repeat: repeat-x repeat-y; 
-    
+    height: 100%;
 }
 
 #header
 {
-    font-size : 60px;
     font-weight : bold;
     text-align : center;
     vertical-align : middle;
@@ -67,13 +65,12 @@ body{
     background-color:#EEEFEF;
 }
 
-#ul_menu  li a 
+.root
 {
     font-size : 30px;
     font-weight : bold;
     font-family: Centaur, serif;
-    display:block;
-    float:left;   
+    display:block;  
     width:180px;
     color:black;
     text-decoration:none;
@@ -82,11 +79,11 @@ body{
     /*pour avoir un effet "outset" avec IE :*/
 }
 
-#ul_menu  li a:hover 
+/*#ul_menu  li a .root:hover 
 {
     background-color:#EEEFEF;
 
-}
+}*/
 
 
 #wrapper
@@ -95,14 +92,15 @@ body{
     margin: 0 auto;
     border-left: 1px solid black;
     border-right: 1px solid black;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
     background-color: white;
+    height: 100%;
 }
 
 #family_obj{
     top:5px;
     background-color: white;
-    
+
 }
 
 #ul_family{
@@ -129,15 +127,15 @@ body{
     float:left;
     margin-right: 20px;
     margin-bottom: 20px;
-    
+
 }
 
 #list-family li h3{
     text-align: center;
-/*    text-decoration: none;*/
-  }
-  
-  #list-family li img{
+    /*    text-decoration: none;*/
+}
+
+#list-family li img{
     border-style: none;
     margin: 0 auto;
     vertical-align: middle;
@@ -158,12 +156,12 @@ body{
     padding-right: 2px;
     padding-top: 30px;
     background-color: white;
+    height:100%;
 }
 
 #main-container
 {
-    margin-top: 200px;
-    margin-bottom: 100px;
+    margin-top: 160px;
 }
 
 #sf-content
@@ -173,6 +171,7 @@ body{
     margin: 0 auto;
     padding-top: 30px;
     font-family: Trebuchet MS, serif;
+    height:600px;
 }
 
 #sf-content h3
@@ -231,4 +230,68 @@ div .h3-gallery{
     font-size: large;
     font-weight: bold;
     text-align: center;
+}
+
+li .family{
+    clear: both;
+    display : block ;
+    height: 30px;
+}
+
+li .shop{
+    clear: both;
+    display : block ;
+    height: 30px;
+}
+
+ul{
+    list-style-type:none;
+}
+
+.ssroot{
+    text-decoration:none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Centaur, serif;
+    color: black;
+}
+
+.ssroot:hover  {
+    text-decoration: underline;
+}
+
+ul #ssli-family{
+    width:100%;
+    display:none;
+}
+
+ul #ssli-shop{
+    width:100%;
+    display:none;
+}
+
+/*li .shop{
+    display:none;
+}*/
+
+div #menu_shop{
+    float: left;    
+    margin-left: 0;
+    margin-top: -62px;
+}
+
+.pagination {
+    padding-top:100px;
+    color:black;
+    text-align: center;
+    clear: both;
+     
+}
+.pagination a{
+    text-decoration: none;
+    color:black;
+}
+.pagination a:hover{
+    text-decoration: underline;
+    color:black;
 }
