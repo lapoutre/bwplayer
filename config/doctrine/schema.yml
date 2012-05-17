@@ -74,3 +74,11 @@ Product:
    local:    family_id
    foreign:  id
    onDelete: cascade
+
+Contact:
+ actAs:
+  Timestampable: ~
+ tableName: contact
+ columns:
+   email: { type: string(255), notnull: true }
+   message: { type: clob, notnull: true }
