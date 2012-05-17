@@ -106,9 +106,10 @@ body{
   }
   
   #list-family li img{
-    max-width: 208px;
     border-style: none;
-    margin-left: 0 auto;
+    margin: 0 auto;
+    vertical-align: middle;
+    width: 220px;
 }
 
 #footer
@@ -189,4 +190,13 @@ div .h3:hover  {
 .content-body{
     margin-top:50px;
     margin-left:5px;
+}
+
+div .h3-gallery{
+    font-family: Trebuchet MS, serif;
+    color: black;
+    width: 100%;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
 }
