@@ -1,10 +1,90 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+contact:
+  url:  /contact
+  param: { module: contact, action: index }
+
+family:
+  url:  /family
+  param: { module: family, action: index }
+  
+family_artist:
+  url: /family/arist.html
+  param: { module: family, action: artist}
+  class:   sfDoctrineRoute
+  options: { model: Family, type: object }
+  requirements:
+    sf_method: [get, post]
+
+family_photo:
+  url: /family/photo.html
+  param: { module: family, action: photo}
+  class:   sfDoctrineRoute
+  options: { model: Family, type: object }
+  requirements:
+    sf_method: [get, post]
+
+family_graph:
+  url: /family/graph.html
+  param: { module: family, action: graph}
+  class:   sfDoctrineRoute
+  options: { model: Family, type: object }
+  requirements:
+    sf_method: [get, post]
+
+family_show:
+  url: /family/show/:slug.html
+  param: { module: family, action: show}
+  class:   sfDoctrineRoute
+  options: { model: Family, type: object }
+  requirements:
+    sf_method: [get, post]
+
+news:
+  url:  /news.html
+  param: { module: news, action: index }
+  
+shop:
+  url:  /shop
+  param: { module: shop, action: index }
+  
+shop_show:
+  url: /shop/show/:slug.html
+  param: { module: shop, action: show}
+  class:   sfDoctrineRoute
+  options: { model: Product, type: object }
+  requirements:
+    sf_method: [get, post]
+  
+shop_release:
+  url: /shop/release.html
+  param: { module: shop, action: release}
+  class:   sfDoctrineRoute
+  options: { model: Product, type: object }
+  requirements:
+    sf_method: [get, post]
+  
+shop_merch:
+  url: /shop/merch.html
+  param: { module: shop, action: merch}
+  class:   sfDoctrineRoute
+  options: { model: Product, type: object }
+  requirements:
+    sf_method: [get, post]
+
+news_show:
+  url: /news/show/:slug.html
+  param: { module: news, action: show}
+  class:   sfDoctrineRoute
+  options: { model: Article, type: object }
+  requirements:
+    sf_method: [get, post]
+
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: news, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules

@@ -1,0 +1,36 @@
+family:
+ Squirhell:
+  name:         'Antoine B'
+  description:  'squirhell'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  link:         'http://wwww.facebook.com/squirhell'
+  contact_mail: 'squirhell@gmail.com'
+  type_family:  1
+ Torpen:
+  name:         'Marc D'
+  description:  'torpen'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  link:         'http://wwww.facebook.com/torpen'
+  contact_mail: 'torpen@gmail.com'
+  type_family:  1
+ Aphex:
+  name:         'Aphex T'
+  description:  'aphex twin'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  link:         'http://wwww.facebook.com/aphex-twin'
+  contact_mail: 'aphextwin@gmail.com'
+  type_family:  1
+ Photographer 1:
+  name:         'Photographer 1'
+  description:  'photographer 1'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  link:         'http://wwww.facebook.com/photo1'
+  contact_mail: 'photo1@gmail.com'
+  type_family:  2
+ Photographer 2:
+  name:         'Photographer 2'
+  description:  'photographer 2'
+  pic:          'cd5a671a5c1bfcd26456a78e1df96605d2fdf214.png'
+  link:         'http://wwww.facebook.com/photo2'
+  contact_mail: 'photo2@gmail.com'
+  type_family:  2

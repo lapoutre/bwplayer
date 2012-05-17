@@ -7,6 +7,7 @@ options:
 Article:
  actAs:
   Timestampable: ~
+  Sluggable: ~
  tableName:     article
  columns:
   title: { type: string(255), notnull: true }
@@ -37,6 +38,7 @@ Comment:
 Family:
  actAs:
    Timestampable: ~
+   Sluggable: ~
  tableName: family
  columns:
   name: { type: string(255), notnull: true }
@@ -55,6 +57,7 @@ Family:
 Product:
  actAs:
   Timestampable: ~
+  Sluggable: ~
  tableName: product
  columns:
   name: { type: string(255), notnull: true }
@@ -64,7 +67,8 @@ Product:
   description: { type: clob, notnull: true }
   soundcloud: { type: string(255), notnull: true }
   prix: { type: string(255), notnull: true }
-  family_id: { type: integer, notnull: true }
+  family_id: { type: integer }
+  type_product: { type: int(1), notnull: true }
  relations:
   Family:
    local:    family_id

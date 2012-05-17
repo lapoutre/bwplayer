@@ -79,6 +79,8 @@ abstract class BaseFamily extends sfDoctrineRecord
              'foreign' => 'family_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
+        $sluggable0 = new Doctrine_Template_Sluggable();
         $this->actAs($timestampable0);
+        $this->actAs($sluggable0);
     }
 }

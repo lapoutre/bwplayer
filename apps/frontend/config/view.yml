@@ -6,15 +6,15 @@ default:
     content-type: text/html
 
   metas:
-    #title:        symfony project
+    title:        BRAIN WASHER RECORDS
     #description:  symfony project
     #keywords:     symfony, project
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css]
+  stylesheets:    [main.css, CSS1.css]
 
-  javascripts:    []
+  javascripts:    [jquery-1.7.4.min.js,menu.js]
 
   has_layout:     true
   layout:         layout

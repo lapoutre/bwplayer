@@ -21,6 +21,7 @@ abstract class BaseArticleForm extends BaseFormDoctrine
       'pic'        => new sfWidgetFormInputText(),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
+      'slug'       => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -30,7 +31,12 @@ abstract class BaseArticleForm extends BaseFormDoctrine
       'pic'        => new sfValidatorString(array('max_length' => 255)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
+      'slug'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
     ));
+
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'Article', 'column' => array('slug')))
+    );
 
     $this->widgetSchema->setNameFormat('article[%s]');
 

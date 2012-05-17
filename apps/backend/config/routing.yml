@@ -1,0 +1,64 @@
+product:
+  class: sfDoctrineRouteCollection
+  options:
+    model: product
+    module: release
+    prefix_path: /release
+    column: id
+    with_wildcard_routes: true
+
+comment:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                comment
+    module:               comment
+    prefix_path:          /comment
+    column:               id
+    with_wildcard_routes: true
+
+family:
+  class: sfDoctrineRouteCollection
+  options:
+    model: family
+    module: family
+    prefix_path: /family
+    column: id
+    with_wildcard_routes: true
+
+article:
+  class: sfDoctrineRouteCollection
+  options:
+    model: article
+    module: news
+    prefix_path: /news
+    column: id
+    with_wildcard_routes: true
+    
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+sf_guard_signin:
+  url: /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url: /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url: /request_password
+  param: { module: sfGuardAuth, action: password }
+
+# default rules
+homepage:
+  url: /
+  param: { module: news, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url: /:module
+  param: { action: index }
+
+default:
+  url: /:module/:action/*
