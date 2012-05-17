@@ -29,13 +29,12 @@
     font-style: normal;
 }
 
-
 body{
     margin: 0;
     padding: 0;
     background-image:url(/images/arpege-baniere.jpg);
     background-repeat: repeat-x repeat-y; 
-
+    height: 100%;
 }
 
 #header
@@ -93,8 +92,9 @@ body{
     margin: 0 auto;
     border-left: 1px solid black;
     border-right: 1px solid black;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
     background-color: white;
+    height: 100%;
 }
 
 #family_obj{
@@ -156,11 +156,12 @@ body{
     padding-right: 2px;
     padding-top: 30px;
     background-color: white;
+    height:100%;
 }
 
 #main-container
 {
-    margin-top: 200px;
+    margin-top: 160px;
 }
 
 #sf-content
