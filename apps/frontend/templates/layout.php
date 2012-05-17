@@ -18,8 +18,8 @@
                     <div id = "menu">
                         <ul id="ul_menu">
                             <li style="border-left: 2px solid black;border-right: 2px solid black;" <?php if($route == "news") echo 'class="current"' ?>><?php echo link_to('NEWS', 'news') ?></li>
-                            <li <?php if($route == "family") echo 'class="current"' ?>><?php echo link_to('FAMILY', 'family') ?></li>
-                            <li <?php if($route == "shop") echo 'class="current"' ?> style="border-left: 2px solid black;"><?php echo link_to('SHOP', 'shop') ?></li>
+                            <li <?php if($route == "family") echo 'class="current"' ?>><a href="#">FAMILY</a></li>
+                            <li <?php if($route == "shop") echo 'class="current"' ?> style="border-left: 2px solid black;"><a href="#">SHOP</a></li>
                             <li <?php if($route == "contact") echo 'class="current"' ?> id="even" style="border-right: 2px solid black;border-left: 2px solid black;"><?php echo link_to('CONTACT', 'contact') ?></li>
                         </ul>
                       <div id="menu_family">

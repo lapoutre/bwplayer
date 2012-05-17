@@ -39,6 +39,7 @@ body{
 {
     font-size : 30px;
     font-weight : bold;
+    font-family: Centaur, serif;
     display:block;
     float:left;   
     width:180px;
@@ -105,9 +106,10 @@ body{
   }
   
   #list-family li img{
-    max-width: 208px;
     border-style: none;
-    margin-left: 0 auto;
+    margin: 0 auto;
+    vertical-align: middle;
+    width: 220px;
 }
 
 #footer
@@ -138,6 +140,14 @@ body{
     width: 900px;
     margin: 0 auto;
     padding-top: 30px;
+    font-family: Trebuchet MS, serif;
+}
+
+#sf-content h3
+{
+    font-family: Trebuchet MS, serif;
+    font-weight: normal;
+    font-size: xx-large;
 }
 
 #this-is-a-border{
@@ -151,17 +161,42 @@ body{
     padding-bottom: 15px;
 }
 
-#article h3 {
-    width: 100%;
-}
-
-#article h3 a {
-    text-decoration: none;
+div .h3  {
+    font-family: Trebuchet MS, serif;
     color: black;
     width: 100%;
+    font-size: large;
+    font-weight: bold;
+}
+
+div .h3:hover  {
+    color: black;
+    width: 100%;
+    font-size: large;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 #le-date-string{
-    font-size: small;
+    font-size: smaller;
+    font-style: italic;
     color: grey;
+}
+
+#news-content{
+    font-family: Trebuchet MS, serif;
+}
+
+.content-body{
+    margin-top:50px;
+    margin-left:5px;
+}
+
+div .h3-gallery{
+    font-family: Trebuchet MS, serif;
+    color: black;
+    width: 100%;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
 }
