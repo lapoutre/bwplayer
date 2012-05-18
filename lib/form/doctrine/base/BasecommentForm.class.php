@@ -19,9 +19,10 @@ abstract class BaseCommentForm extends BaseFormDoctrine
       'nick'        => new sfWidgetFormInputText(),
       'message'     => new sfWidgetFormTextarea(),
       'is_approved' => new sfWidgetFormInputCheckbox(),
-      'article_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Article'), 'add_empty' => false)),
+      'article_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Article'), 'add_empty' => true)),
       'created_at'  => new sfWidgetFormDateTime(),
       'updated_at'  => new sfWidgetFormDateTime(),
+      'slug'        => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
@@ -29,10 +30,15 @@ abstract class BaseCommentForm extends BaseFormDoctrine
       'nick'        => new sfValidatorString(array('max_length' => 255)),
       'message'     => new sfValidatorString(),
       'is_approved' => new sfValidatorBoolean(array('required' => false)),
-      'article_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Article'))),
+      'article_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Article'), 'required' => false)),
       'created_at'  => new sfValidatorDateTime(),
       'updated_at'  => new sfValidatorDateTime(),
+      'slug'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
     ));
+
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'Comment', 'column' => array('slug')))
+    );
 
     $this->widgetSchema->setNameFormat('comment[%s]');
 

@@ -10,7 +10,7 @@ family:
   param: { module: family, action: index }
   
 family_artist:
-  url: /family/arist.html
+  url: /family/artist.html
   param: { module: family, action: artist}
   class:   sfDoctrineRoute
   options: { model: Family, type: object }
@@ -78,6 +78,14 @@ news_show:
   param: { module: news, action: show}
   class:   sfDoctrineRoute
   options: { model: Article, type: object }
+  requirements:
+    sf_method: [get, post]
+
+comment_form:
+  url: /comment/form/:slug.html
+  param: { module: comment, action: form}
+  class:   sfDoctrineRoute
+  options: { model: Comment, type: object }
   requirements:
     sf_method: [get, post]
 
