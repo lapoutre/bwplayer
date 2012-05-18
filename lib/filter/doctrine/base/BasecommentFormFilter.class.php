@@ -19,6 +19,7 @@ abstract class BaseCommentFormFilter extends BaseFormFilterDoctrine
       'article_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Article'), 'add_empty' => true)),
       'created_at'  => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'  => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
+      'slug'        => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
@@ -28,6 +29,7 @@ abstract class BaseCommentFormFilter extends BaseFormFilterDoctrine
       'article_id'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Article'), 'column' => 'id')),
       'created_at'  => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'  => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
+      'slug'        => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('comment_filters[%s]');
@@ -54,6 +56,7 @@ abstract class BaseCommentFormFilter extends BaseFormFilterDoctrine
       'article_id'  => 'ForeignKey',
       'created_at'  => 'Date',
       'updated_at'  => 'Date',
+      'slug'        => 'Text',
     );
   }
 }

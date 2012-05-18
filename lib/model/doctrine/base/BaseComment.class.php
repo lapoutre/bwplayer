@@ -48,7 +48,7 @@ abstract class BaseComment extends sfDoctrineRecord
              ));
         $this->hasColumn('article_id', 'integer', 8, array(
              'type' => 'integer',
-             'notnull' => true,
+             'notnull' => false,
              'length' => 8,
              ));
 
@@ -65,6 +65,8 @@ abstract class BaseComment extends sfDoctrineRecord
              'onDelete' => 'cascade'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
+        $sluggable0 = new Doctrine_Template_Sluggable();
         $this->actAs($timestampable0);
+        $this->actAs($sluggable0);
     }
 }
