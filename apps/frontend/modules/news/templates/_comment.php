@@ -1,11 +1,12 @@
 <div class="comment">
-<?php foreach ($comments as $i => $comment) : ?>
-  <?php if($comment->getIsApproved()): ?>
-  _______________________________________________________<br>
-  <?php echo $comment->getNick(); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <?php echo $comment->getCreatedAt(); ?><br><br>
-  <?php echo $comment->getMessage(); ?><br>
- <?php endif; ?>
-<?php endforeach; ?>
+  <?php foreach ($comments as $i => $comment) : ?>
+    <?php if ($comment->getIsApproved()): ?>
+      <div id="comment_body">
+        <span style="font-style: italic;color: #333333;">Posté par</span> <span id="nick_comment"><?php echo $comment->getNick(); ?></span>,  le <?php echo $comment->getCreatedAt(); ?><br>
+        <p id="message_comment"><?php echo $comment->getMessage(); ?></p><br>
+      </div><br>
+    <?php endif; ?>
+  <?php endforeach; ?>
 </div>
 
 

@@ -300,3 +300,20 @@ div #menu_shop{
 .comment{
     margin-left: 230px;
 }
+
+#nick_comment{
+    font-weight: bold;
+}
+
+#message_comment{
+    background-color: lightgray;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+#comment_body{
+    border-top: solid 1px grey;
+        width: 520px;
+}
