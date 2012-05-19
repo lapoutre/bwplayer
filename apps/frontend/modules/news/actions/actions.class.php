@@ -37,4 +37,5 @@ class newsActions extends sfActions
     $this->comments = Doctrine::getTable('comment')->findByArticleId($id);
     
   }
+
 }

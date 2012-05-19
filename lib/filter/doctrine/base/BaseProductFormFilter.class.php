@@ -15,7 +15,7 @@ abstract class BaseProductFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'name'         => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'tracklist'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'release_date' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'release_date' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'pic'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'description'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'soundcloud'   => new sfWidgetFormFilterInput(array('with_empty' => false)),
@@ -30,7 +30,7 @@ abstract class BaseProductFormFilter extends BaseFormFilterDoctrine
     $this->setValidators(array(
       'name'         => new sfValidatorPass(array('required' => false)),
       'tracklist'    => new sfValidatorPass(array('required' => false)),
-      'release_date' => new sfValidatorPass(array('required' => false)),
+      'release_date' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDateTime(array('required' => false)))),
       'pic'          => new sfValidatorPass(array('required' => false)),
       'description'  => new sfValidatorPass(array('required' => false)),
       'soundcloud'   => new sfValidatorPass(array('required' => false)),
@@ -62,7 +62,7 @@ abstract class BaseProductFormFilter extends BaseFormFilterDoctrine
       'id'           => 'Number',
       'name'         => 'Text',
       'tracklist'    => 'Text',
-      'release_date' => 'Text',
+      'release_date' => 'Date',
       'pic'          => 'Text',
       'description'  => 'Text',
       'soundcloud'   => 'Text',

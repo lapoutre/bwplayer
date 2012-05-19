@@ -23,12 +23,13 @@ Article:
 Comment:
  actAs:
   Timestampable: ~
+  Sluggable: ~
  tableName: comment
  columns:
   nick:         { type: string(255), notnull: true }
   message:      { type: clob, notnull: true }
   is_approved:  { type: boolean, default: false, notnull: true }
-  article_id:   { type: integer(8), notnull: true }
+  article_id:   { type: integer(8), notnull: false}
  relations:
   Article:
    local:         article_id
@@ -62,7 +63,7 @@ Product:
  columns:
   name: { type: string(255), notnull: true }
   tracklist: { type: clob, notnull: true }
-  release_date: { type: string(255), notnull: true }
+  release_date: { type: date, notnull: true }
   pic: { type: string(255), notnull: true }
   description: { type: clob, notnull: true }
   soundcloud: { type: string(255), notnull: true }
@@ -82,3 +83,14 @@ Contact:
  columns:
    email: { type: string(255), notnull: true }
    message: { type: clob, notnull: true }
+   
+Customer:
+ actAs:
+  Timestampable: ~
+ tableName: contact
+ columns:
+   email: { type: string(255), notnull: true }
+   product_name: { type: string(255), notnull: true }
+   address: { type: clob }
+   tel: { type: string(255) }
+   is_transaction_done: { type: boolean, default: false }

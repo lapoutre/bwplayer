@@ -7,7 +7,7 @@
  * 
  * @property string $name
  * @property clob $tracklist
- * @property string $release_date
+ * @property date $release_date
  * @property string $pic
  * @property clob $description
  * @property string $soundcloud
@@ -18,7 +18,7 @@
  * 
  * @method string  getName()         Returns the current record's "name" value
  * @method clob    getTracklist()    Returns the current record's "tracklist" value
- * @method string  getReleaseDate()  Returns the current record's "release_date" value
+ * @method date    getReleaseDate()  Returns the current record's "release_date" value
  * @method string  getPic()          Returns the current record's "pic" value
  * @method clob    getDescription()  Returns the current record's "description" value
  * @method string  getSoundcloud()   Returns the current record's "soundcloud" value
@@ -56,10 +56,9 @@ abstract class BaseProduct extends sfDoctrineRecord
              'type' => 'clob',
              'notnull' => true,
              ));
-        $this->hasColumn('release_date', 'string', 255, array(
-             'type' => 'string',
+        $this->hasColumn('release_date', 'date', null, array(
+             'type' => 'date',
              'notnull' => true,
-             'length' => 255,
              ));
         $this->hasColumn('pic', 'string', 255, array(
              'type' => 'string',
