@@ -7,11 +7,14 @@
  * 
  * @property string $email
  * @property clob $message
+ * @property int $type_contact
  * 
- * @method string  getEmail()   Returns the current record's "email" value
- * @method clob    getMessage() Returns the current record's "message" value
- * @method Contact setEmail()   Sets the current record's "email" value
- * @method Contact setMessage() Sets the current record's "message" value
+ * @method string  getEmail()        Returns the current record's "email" value
+ * @method clob    getMessage()      Returns the current record's "message" value
+ * @method int     getTypeContact()  Returns the current record's "type_contact" value
+ * @method Contact setEmail()        Sets the current record's "email" value
+ * @method Contact setMessage()      Sets the current record's "message" value
+ * @method Contact setTypeContact()  Sets the current record's "type_contact" value
  * 
  * @package    bwrecords
  * @subpackage model
@@ -31,6 +34,11 @@ abstract class BaseContact extends sfDoctrineRecord
         $this->hasColumn('message', 'clob', null, array(
              'type' => 'clob',
              'notnull' => true,
+             ));
+        $this->hasColumn('type_contact', 'int', 1, array(
+             'type' => 'int',
+             'notnull' => true,
+             'length' => 1,
              ));
 
         $this->option('collate', 'utf8_unicode_ci');

@@ -83,6 +83,7 @@ Contact:
  columns:
    email: { type: string(255), notnull: true }
    message: { type: clob, notnull: true }
+   type_contact: { type: int(1), notnull: true }
    
 Customer:
  actAs:

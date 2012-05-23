@@ -12,4 +12,12 @@
  */
 class Contact extends BaseContact
 {
+    const TYPE_CONTACT = 1;
+    const TYPE_DEMO = 2;
+    const TYPE_GRA = 3;
+    const TYPE_PHO = 4;
+
+    public static function getType() {
+        return array(self::TYPE_CONTACT => "Contact/Booking",  self::TYPE_DEMO => "Demo/Remix",  self::TYPE_GRA => "Direction artistique graphisme",  self::TYPE_PHO => "Direction artistique photographie");
+    }
 }
