@@ -317,3 +317,25 @@ div #menu_shop{
     border-top: solid 1px grey;
         width: 520px;
 }
+
+.description{
+    float: right;
+    width: 520px;
+}
+
+.prix{
+    font-size: 28px;
+    padding-left: 103px;
+}
+
+.date{
+    
+}
+
+.separator{
+    text-decoration: line-through;
+}
+
+.tracklist{
+    text-align: center;
+}
